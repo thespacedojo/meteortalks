@@ -1,3 +1,13 @@
 <template name="home">
-  Welcome to my new meteor app
+  <div class="tagline text-center">
+    <h2>Welcome to Meteor Talks!</h2>
+    <h3>A searchable collection of youtube videos about Meteor.js.</h3>
+  </div>
+  {{> videos}}
+</template>
+
+<template name="videos">
+{{#each videos}}
+  {{> video}}
+{{/each}}
 </template>

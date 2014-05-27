@@ -2,12 +2,14 @@
   "packages": {
     "iron-router": {},
     "accounts-entry": {
-      "git": "https://github.com/Differential/accounts-entry.git",
-      "branch": "master"
+      "path": "/Users/josh/Code/Differential/accounts-entry"
     },
     "handlebars-server": {
       "git": "git@github.com:EventedMind/meteor-handlebars-server.git"
     },
-    "minimongoid": {}
+    "minimongoid": {},
+    "youtube": {},
+    "simple-form": {},
+    "autocomplete": {}
   }
 }

@@ -9,6 +9,69 @@ img {
   max-width: 100%;
 }
 
+.tagline {
+  h2 {
+    margin-bottom: 5px;
+  }
+
+  h3 {
+    margin-top: 5px;
+    margin-bottom: 35px;
+  }
+}
+
+.navbar-nav .dropdown-menu {
+  min-width: 300px;
+}
+
+#newVideo label {
+  font-size: 0.9em;
+}
+
+.video-pic {
+
+  margin-bottom: 20px;
+
+  a {
+    display: block;
+    position: relative;
+
+    &:hover {
+
+      .time {
+        display: none;
+      }
+
+      i {
+        display: block;
+      }
+    }
+
+    .time {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      background: #000;
+      color: #fff;
+      opacity: 0.85;
+      padding: 5px 7px;
+      line-height: 12px;
+      font-size: 13px;
+      font-weight: 400;
+    }
+
+    i {
+      position: absolute;
+      top: 5px;
+      right: 8px;
+      color: #fff;
+      opacity: 0.95;
+      display: none;
+      font-size: 24px;
+      line-height: 24px;
+    }
+  }
+}
 
 // MISCELLANEOUS
 

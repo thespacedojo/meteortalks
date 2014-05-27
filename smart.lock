@@ -4,25 +4,25 @@
     "basePackages": {
       "iron-router": {},
       "accounts-entry": {
-        "git": "https://github.com/Differential/accounts-entry.git",
-        "branch": "master"
+        "path": "../accounts-entry"
       },
       "handlebars-server": {
         "git": "git@github.com:EventedMind/meteor-handlebars-server.git",
         "branch": "master"
       },
-      "minimongoid": {}
+      "minimongoid": {},
+      "youtube": {},
+      "simple-form": {},
+      "autocomplete": {}
     },
     "packages": {
       "iron-router": {
         "git": "https://github.com/EventedMind/iron-router.git",
-        "tag": "v0.7.0",
-        "commit": "05f34bc48c4cad9fdaa366c1ddcabe6980232ece"
+        "tag": "v0.7.1",
+        "commit": "d1ffb3f06ea4c112132b030f2eb1a70b81675ecb"
       },
       "accounts-entry": {
-        "git": "https://github.com/Differential/accounts-entry.git",
-        "branch": "master",
-        "commit": "f9abbc5f77abaa3f3cb22f343cd19ab9482003ff"
+        "path": "../accounts-entry"
       },
       "handlebars-server": {
         "git": "git@github.com:EventedMind/meteor-handlebars-server.git",
@@ -31,23 +31,43 @@
       },
       "minimongoid": {
         "git": "https://github.com/Exygy/minimongoid.git",
-        "tag": "v0.8.3",
-        "commit": "8a4849426f1775f9886f303067e50877696fae43"
+        "tag": "v0.8.8",
+        "commit": "cf8d0bec44934d617544965977f270f2a8cdca02"
+      },
+      "youtube": {
+        "git": "https://github.com/Differential/youtube.git",
+        "tag": "v0.0.1",
+        "commit": "1642e4cb15df728d5b1d4ad0998b63672824fc76"
+      },
+      "simple-form": {
+        "git": "https://github.com/Differential/simple-form.git",
+        "tag": "v0.1.1",
+        "commit": "71360a47bd0c039b5e775c12c8ca87ee0e44a859"
+      },
+      "autocomplete": {
+        "git": "https://github.com/mizzao/meteor-autocomplete.git",
+        "tag": "v0.4.4",
+        "commit": "1ffada2f92b323668e44ae5cfc5d1776b12987d0"
       },
       "blaze-layout": {
         "git": "https://github.com/EventedMind/blaze-layout.git",
-        "tag": "v0.2.2",
-        "commit": "8bc53798fe5965669ae67c72f91829fcfdceabfd"
+        "tag": "v0.2.4",
+        "commit": "b40e9b0612329288d75cf52ad14a7da64bb8618f"
       },
       "accounts-t9n": {
         "git": "https://github.com/softwarerero/meteor-accounts-t9n.git",
-        "tag": "v0.0.3",
-        "commit": "d1710f979d6955459d9ce0374df81d22c3c6a6ab"
+        "tag": "v0.0.5",
+        "commit": "ad9539a8818049d5d9fa050d8b2a1f62706483b1"
       },
       "underscore-string-latest": {
         "git": "https://github.com/TimHeckel/meteor-underscore-string.git",
         "tag": "v2.3.3",
         "commit": "4a5d70eee48fbd90a6e6fc78747250d704a0b3bb"
+      },
+      "caret-position": {
+        "git": "https://github.com/StockBase/meteor-caret-position.git",
+        "tag": "v2.1.0-3",
+        "commit": "6028cf980f62cbf72cb2ea527091a3a31f87b8a7"
       }
     }
   }

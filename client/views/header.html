@@ -1,4 +1,43 @@
 <template name="header">
   <header>
+    <nav class="navbar navbar-default" role="navigation">
+      <div class="container-fluid">
+
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#top-menu">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/"><i class="fa fa-rocket"></i> Meteor Talks</a>
+        </div>
+        <div class="col-sm-2 pull-left">
+          <form id="search" class="navbar-form" role="search">
+            <div class="input-group">
+              <input type="text" class="form-control" name="query" value="{{query}}" placeholder="Search">
+              <div class="input-group-btn">
+                <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <div class="collapse navbar-collapse" id="top-menu">
+          <ul class="nav navbar-nav navbar-right">
+          {{#if signedIn}}
+            <li class="dropdown">
+              <button type="button" class="addVideo btn btn-danger navbar-btn dropdown-toggle" data-toggle="dropdown"><i class="fa fa-plus"></i> Add a talk</button>
+              <div class="dropdown-menu">
+                <div class="col-sm-12">
+                  {{> newVideo}}
+                </div>
+              </div>
+            </li>
+          {{/if}}
+          {{> accountButtons}}
+          </ul>
+        </div>
+      </div>
+    </nav>
   </header>
 </template>
