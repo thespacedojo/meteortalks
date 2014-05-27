@@ -2,10 +2,10 @@
   "packages": {
     "iron-router": {},
     "accounts-entry": {
-      "path": "/Users/josh/Code/Differential/accounts-entry"
+      "git": "https://github.com/Differential/accounts-entry.git"
     },
     "handlebars-server": {
-      "git": "git@github.com:EventedMind/meteor-handlebars-server.git"
+      "git": "https://github.com/EventedMind/meteor-handlebars-server.git"
     },
     "minimongoid": {},
     "youtube": {},

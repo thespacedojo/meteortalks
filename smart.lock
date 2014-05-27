@@ -4,10 +4,11 @@
     "basePackages": {
       "iron-router": {},
       "accounts-entry": {
-        "path": "../accounts-entry"
+        "git": "https://github.com/Differential/accounts-entry.git",
+        "branch": "master"
       },
       "handlebars-server": {
-        "git": "git@github.com:EventedMind/meteor-handlebars-server.git",
+        "git": "https://github.com/EventedMind/meteor-handlebars-server.git",
         "branch": "master"
       },
       "minimongoid": {},
@@ -22,10 +23,12 @@
         "commit": "d1ffb3f06ea4c112132b030f2eb1a70b81675ecb"
       },
       "accounts-entry": {
-        "path": "../accounts-entry"
+        "git": "https://github.com/Differential/accounts-entry.git",
+        "branch": "master",
+        "commit": "2c547b9cdf802df07fdb55fcc9e91df022ea800b"
       },
       "handlebars-server": {
-        "git": "git@github.com:EventedMind/meteor-handlebars-server.git",
+        "git": "https://github.com/EventedMind/meteor-handlebars-server.git",
         "branch": "master",
         "commit": "1b72c4e9d82af66293e50be4516c487d15d97464"
       },
