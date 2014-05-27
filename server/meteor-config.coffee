@@ -4,5 +4,5 @@ Meteor.startup ->
     console.log "Registering meteor developer"
     ServiceConfiguration.configurations.insert
       service: "meteor-developer"
-      clientId: Meteor.settings.md-clientId
-      secret: Meteor.settings.md-secret
+      clientId: Meteor.settings.mdClientId
+      secret: Meteor.settings.mdSecret
