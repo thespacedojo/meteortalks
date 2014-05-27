@@ -13,8 +13,7 @@
       },
       "minimongoid": {},
       "youtube": {},
-      "simple-form": {},
-      "autocomplete": {}
+      "simple-form": {}
     },
     "packages": {
       "iron-router": {
@@ -47,11 +46,6 @@
         "tag": "v0.1.1",
         "commit": "71360a47bd0c039b5e775c12c8ca87ee0e44a859"
       },
-      "autocomplete": {
-        "git": "https://github.com/mizzao/meteor-autocomplete.git",
-        "tag": "v0.4.4",
-        "commit": "1ffada2f92b323668e44ae5cfc5d1776b12987d0"
-      },
       "blaze-layout": {
         "git": "https://github.com/EventedMind/blaze-layout.git",
         "tag": "v0.2.4",
@@ -66,11 +60,6 @@
         "git": "https://github.com/TimHeckel/meteor-underscore-string.git",
         "tag": "v2.3.3",
         "commit": "4a5d70eee48fbd90a6e6fc78747250d704a0b3bb"
-      },
-      "caret-position": {
-        "git": "https://github.com/StockBase/meteor-caret-position.git",
-        "tag": "v2.1.0-3",
-        "commit": "6028cf980f62cbf72cb2ea527091a3a31f87b8a7"
       }
     }
   }
