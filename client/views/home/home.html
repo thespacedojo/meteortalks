@@ -7,7 +7,11 @@
 </template>
 
 <template name="videos">
-{{#each videos}}
-  {{> video}}
+{{#each rowedUpVideos}}
+  <div class="row">
+    {{#each this}}
+      {{> video}}
+    {{/each}}
+  </div>
 {{/each}}
 </template>
