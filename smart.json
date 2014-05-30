@@ -9,6 +9,7 @@
     },
     "minimongoid": {},
     "youtube": {},
-    "simple-form": {}
+    "simple-form": {},
+    "flash-messages": {}
   }
 }

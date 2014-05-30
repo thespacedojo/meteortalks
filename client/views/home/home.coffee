@@ -11,3 +11,4 @@ Template.videos.helpers
     grouped = _.groupBy @videos, (video, id) ->
       Math.floor(id/4)
     _.toArray(grouped)
+

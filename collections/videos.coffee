@@ -6,7 +6,7 @@ class @Video extends Minimongoid
   @_collection: new Meteor.Collection('videos')
 
   @before_create: (video) ->
-    video.viewCount = 0
+    video.siteViewCount = 0
     video
 
   @after_create: (video) ->
@@ -39,6 +39,11 @@ Video._collection.allow
 
 Meteor.methods
 
+  viewedVideo: (videoId) ->
+    return unless videoId
+    video = Video.first(videoId)
+    Video._collection.update(videoId, {$inc: {siteViewCount: 1}})
+
   fetchVideo: (videoId) ->
     if Meteor.isServer
       future = new Future()
@@ -50,5 +55,5 @@ Meteor.methods
           future.return data
       info = future.wait()
       console.log info
-      data = {title: info.title, description: info.description, thumbnail: info.thumbnail.hqDefault, player: info.player.default, mobilePlayer: info.player.mobile, likeCount: info.likeCount, duration: info.duration, uploadedAt: new Date(info.uploaded)}
+      data = {title: info.title, description: info.description, thumbnail: info.thumbnail.hqDefault, player: info.player.default, mobilePlayer: info.player.mobile, likeCount: info.likeCount, duration: info.duration, uploadedAt: new Date(info.uploaded), viewCount: info.viewCount}
       video.update(data)

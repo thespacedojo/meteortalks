@@ -3,4 +3,6 @@ Template.newVideo.events
     event.preventDefault()
     data = SimpleForm.processForm(event.target)
     Video.create(data)
-    Router.go('/')
+    $('.addVideo').dropdown('toggle')
+    $('#youtubeId').val('')
+    FlashMessages.sendSuccess("The video #{data.youtubeId} was added");

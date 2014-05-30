@@ -13,7 +13,8 @@
       },
       "minimongoid": {},
       "youtube": {},
-      "simple-form": {}
+      "simple-form": {},
+      "flash-messages": {}
     },
     "packages": {
       "iron-router": {
@@ -45,6 +46,11 @@
         "git": "https://github.com/Differential/simple-form.git",
         "tag": "v0.1.1",
         "commit": "71360a47bd0c039b5e775c12c8ca87ee0e44a859"
+      },
+      "flash-messages": {
+        "git": "https://github.com/camilosw/flash-messages.git",
+        "tag": "v0.2.4",
+        "commit": "8e7d09e7b7bd61ab10aaad01371dcecef2e9f797"
       },
       "blaze-layout": {
         "git": "https://github.com/EventedMind/blaze-layout.git",
