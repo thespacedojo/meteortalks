@@ -5,6 +5,10 @@ class @Video extends Minimongoid
 
   @_collection: new Meteor.Collection('videos')
 
+  @before_create: (video) ->
+    video.viewCount = 0
+    video
+
   @after_create: (video) ->
     console.log video._id
     Meteor.call('fetchVideo', video._id)
@@ -46,5 +50,5 @@ Meteor.methods
           future.return data
       info = future.wait()
       console.log info
-      data = {title: info.title, description: info.description, thumbnail: info.thumbnail.hqDefault, player: info.player.default, mobilePlayer: info.player.mobile, likeCount: info.likeCount, viewCount: info.viewCount, duration: info.duration, uploadedAt: new Date(info.uploaded)}
+      data = {title: info.title, description: info.description, thumbnail: info.thumbnail.hqDefault, player: info.player.default, mobilePlayer: info.player.mobile, likeCount: info.likeCount, duration: info.duration, uploadedAt: new Date(info.uploaded)}
       video.update(data)
