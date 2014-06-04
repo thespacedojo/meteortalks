@@ -44,16 +44,21 @@ Meteor.methods
     video = Video.first(videoId)
     Video._collection.update(videoId, {$inc: {siteViewCount: 1}})
 
-  fetchVideo: (videoId) ->
+  addVideo: (data) ->
+    video = Video._collection.upsert({youtubeId: data.youtubeId}, {$set: {youtubeId: data.youtubeId}})
+    # console.log(video)
+    Meteor.call('fetchVideo', data.youtubeId)
+
+  fetchVideo: (youtubeId) ->
     if Meteor.isServer
       future = new Future()
-      video = Video.first(videoId)
+      video = Video.first({youtubeId: youtubeId})
       Youtube.video video.youtubeId, (error, data) ->
         if error
           future.return ""
         else
           future.return data
       info = future.wait()
-      console.log info
+      #console.log info
       data = {title: info.title, description: info.description, thumbnail: info.thumbnail.hqDefault, player: info.player.default, mobilePlayer: info.player.mobile, likeCount: info.likeCount, duration: info.duration, uploadedAt: new Date(info.uploaded), viewCount: info.viewCount}
       video.update(data)

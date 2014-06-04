@@ -7,6 +7,7 @@ standard-app-packages
 iron-router
 coffeescript
 less
+velocity
 accounts-ui
 accounts-entry
 handlebars-server
@@ -17,3 +18,5 @@ accounts-meteor-developer
 service-configuration
 simple-form
 flash-messages
+cucumber
+chai
