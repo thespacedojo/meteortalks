@@ -5,4 +5,4 @@ Template.video.rendered = ()->
 Template.video.events
 
   'click .shadowbox': (event) ->
-    Meteor.call('viewedVideo', @id) 
+    Meteor.call('viewedVideo', @id)

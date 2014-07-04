@@ -45,9 +45,17 @@ Meteor.methods
     Video._collection.update(videoId, {$inc: {siteViewCount: 1}})
 
   addVideo: (data) ->
-    video = Video._collection.upsert({youtubeId: data.youtubeId}, {$set: {youtubeId: data.youtubeId}})
-    # console.log(video)
-    Meteor.call('fetchVideo', data.youtubeId)
+    youtubeId = Meteor.call('extractId', 'youtube', data.youtubeUrl)
+    error =
+      type : 'error'
+      msg  : "Sorry, video URL is invalid."
+    success =
+      type : 'success'
+      msg  : "Successfully added video #{data.youtubeUrl}."
+    return error unless youtubeId
+    video = Video._collection.upsert({youtubeId: youtubeId}, {$set: {youtubeId: youtubeId}})
+    Meteor.call('fetchVideo', youtubeId)
+    success
 
   fetchVideo: (youtubeId) ->
     if Meteor.isServer
@@ -62,3 +70,19 @@ Meteor.methods
       #console.log info
       data = {title: info.title, description: info.description, thumbnail: info.thumbnail.hqDefault, player: info.player.default, mobilePlayer: info.player.mobile, likeCount: info.likeCount, duration: info.duration, uploadedAt: new Date(info.uploaded), viewCount: info.viewCount}
       video.update(data)
+
+  extractId: (provider, url) ->
+    Meteor.call('extractYouTubeId', url) if provider is 'youtube'
+
+  extractYouTubeId: (url) ->
+    return unless /youtu\.?be/.test(url)
+    patterns = [
+      /youtu\.be\/([^#\&\?]{11})/,
+      /\?v=([^#\&\?]{11})/,
+      /\/v\/([^#\&\?]{11})/,
+      /\&v=([^#\&\?]{11})/,
+      /embed\/([^#\&\?]{11})/
+    ]
+    pattern.exec(url)[1] for pattern in patterns when pattern.test(url)
+    tokens = url.split(/[\/\&\?=#\.\s]/g);
+    token for token in tokens when /^[^#\&\?]{11}$/.test(token)
