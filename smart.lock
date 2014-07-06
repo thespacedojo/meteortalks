@@ -15,7 +15,8 @@
       "youtube": {},
       "simple-form": {},
       "flash-messages": {},
-      "chai": {}
+      "chai": {},
+      "publish-counts": {}
     },
     "packages": {
       "iron-router": {
@@ -57,6 +58,11 @@
         "git": "https://github.com/spacejamio/meteor-chai.git",
         "tag": "v0.1.5",
         "commit": "9c8f1f769839c946f11f580b8c6f8601f9286a66"
+      },
+      "publish-counts": {
+        "git": "https://github.com/percolatestudio/publish-counts.git",
+        "tag": "v0.2.1",
+        "commit": "46ec19e25888c806ad458c3f6ff87fa9c7b6afdc"
       },
       "blaze-layout": {
         "git": "https://github.com/EventedMind/blaze-layout.git",

@@ -3,9 +3,11 @@ Router.map ->
     path: '/'
     waitOn: -> [
       Meteor.subscribe('videos'),
+      Meteor.subscribe('videoCount')
     ]
     data: ->
       videos: Video.where({}, {sort: {uploadedAt: -1}})
+      videoCount: Counts.get('videos-count')
 
   @route 'dashboard',
     path: '/dashboard'

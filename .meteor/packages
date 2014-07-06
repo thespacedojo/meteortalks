@@ -18,3 +18,4 @@ service-configuration
 simple-form
 flash-messages
 chai
+publish-counts
