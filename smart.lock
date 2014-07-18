@@ -16,7 +16,8 @@
       "simple-form": {},
       "flash-messages": {},
       "chai": {},
-      "publish-counts": {}
+      "publish-counts": {},
+      "analytics": {}
     },
     "packages": {
       "iron-router": {
@@ -27,7 +28,7 @@
       "accounts-entry": {
         "git": "https://github.com/Differential/accounts-entry.git",
         "branch": "master",
-        "commit": "eaca425e3a11e8d3fb4d3dc54d7f8ac8081be9a0"
+        "commit": "5cbe67e0d2adc2ae4d0e9f18be3ed49d469c3a40"
       },
       "handlebars-server": {
         "git": "https://github.com/EventedMind/meteor-handlebars-server.git",
@@ -63,6 +64,11 @@
         "git": "https://github.com/percolatestudio/publish-counts.git",
         "tag": "v0.2.1",
         "commit": "46ec19e25888c806ad458c3f6ff87fa9c7b6afdc"
+      },
+      "analytics": {
+        "git": "https://github.com/Tarang/Meteor-Analytics.git",
+        "tag": "v0.4.5",
+        "commit": "171b6b899bc24ca4cd676412c53bff6e5616aeab"
       },
       "blaze-layout": {
         "git": "https://github.com/EventedMind/blaze-layout.git",

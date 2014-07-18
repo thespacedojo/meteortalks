@@ -12,6 +12,7 @@
     "simple-form": {},
     "flash-messages": {},
     "chai": {},
-    "publish-counts": {}
+    "publish-counts": {},
+    "analytics": {}
   }
 }
