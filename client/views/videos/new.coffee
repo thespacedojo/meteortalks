@@ -2,7 +2,9 @@ Template.newVideo.events
   'submit #newVideo': (event) ->
     event.preventDefault()
     data = SimpleForm.processForm(event.target)
-    Meteor.call('addVideo', data)
+    url  = data.youtubeUrl
     $('.addVideo').dropdown('toggle')
-    $('#youtubeId').val('')
-    FlashMessages.sendSuccess("The video #{data.youtubeId} was added")
+    $('#youtubeUrl').val('')
+    Meteor.call 'addVideo', data, (err, res) ->
+      FlashMessages.sendError(res.msg) if res.type is 'error'
+      FlashMessages.sendSuccess(res.msg) if res.type is 'success'
